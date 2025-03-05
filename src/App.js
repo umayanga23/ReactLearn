@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React,{useState} from 'react';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [color,setColor] = useState();
+
+  const divStyle = {backgroundColor: 'purple'};
+ 
+   return (
+     <div style={divStyle}>
+       <p>The color is {color}</p>
+       <button onClick={()=> setColor("Aquamarine")}>
+         Aquamarine
+       </button>
+       <button onClick={()=> setColor("BlueViolet")}>
+         BlueViolet
+       </button>
+       <button onClick={()=> setColor("Chartreuse")}>
+         Chartreuse
+       </button>
+       <button onClick={()=> setColor("CornflowerBlue")}>
+         CornflowerBlue
+       </button>
+     </div>
+   );
 }
 
 export default App;
